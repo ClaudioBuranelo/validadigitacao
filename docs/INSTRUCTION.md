@@ -1,20 +1,16 @@
 ### 🚀 **1. Estrutura Básica do Projeto**
-meu_pacote/
-│
-├── meu_pacote/           # Código-fonte da biblioteca
+validadigitacao/
+├── validadigitacao/
 │   ├── __init__.py
-│   └── modulo.py
-│
-├── tests/                # Testes automatizados
-│   └── test_modulo.py
-│
-├── docs/                 # Documentação (opcional, se for extensa)
-│
-├── setup.py              # Script de instalação
-├── pyproject.toml        # Configuração moderna do projeto
-├── README.md             # Documentação principal
-├── LICENSE               # Licença do projeto
-└── .gitignore            # Arquivos a serem ignorados pelo Git
+│   ├── extrator.py         # Lê e extrai dados do PDF/imagem
+│   ├── comparador.py       # Compara os dados extraídos com o JSON
+│   └── analisador.py       # Orquestra a análise e retorna o JSON final
+├── tests/
+│   └── test_analise.py     # Testes unitários
+├── README.md
+├── requirements.txt
+└── setup.py                # (opcional, se quiser empacotar)
+
 
 
 ### 🧾 **2. Documentação Essencial**
