@@ -54,5 +54,3 @@ Se quiser, posso:
 - Criar um modelo inicial de projeto para você.
 - Gerar um `README.md` com base no que sua biblioteca faz.
 - Ajudar a configurar testes ou documentação automática.
-
-Você já tem um nome para a biblioteca ou uma ideia do que ela vai fazer? Assim posso personalizar melhor a ajuda!

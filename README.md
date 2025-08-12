@@ -1,32 +1,34 @@
-# 📦 validadigitacao
+# validadigitacao
 
-O Objetivo principal do projeto é receber um objeto do tipo json e um documento que pode ser imagem ou pdf, extrair alguns dados da imagem ou pdf e comparar com o json recebido, retornando um json com a análise.
+Biblioteca Python para validação de digitados através da extração de dados via OCR de imagens/PDFs e comparação com JSON fornecido.
 
-## 🧠 Funcionalidades
-📄 Leitura de documentos com OCR
-🧾 Extração automática de dados estruturados
-🔍 Comparação com dados digitados
-✅ Geração de relatório com os resultados da comparação
-✅ Recebe os dados no formato JSON e a lista de arquivos para buscar a informação
-✅ Compara as informações gerando um log no formato JSON
-✅ Retorna o texto em formato JSON
+## Funcionalidades
 
-🗂️ Estrutura sugerida do projeto
-validadigitacao/
-├── validadigitacao/
-│   ├── __init__.py
-│   ├── extrator.py         # Lê e extrai dados do PDF/imagem
-│   ├── comparador.py       # Compara os dados extraídos com o JSON
-│   └── analisador.py       # Orquestra a análise e retorna o JSON final
-├── tests/
-│   └── test_analise.py     # Testes unitários
-├── README.md
-├── requirements.txt
-└── setup.py                # (opcional, se quiser empacotar)
+- Extração de texto via OCR (pytesseract + Pillow)
+- Conversão de PDFs para imagens (pdf2image)
+- Extração de campos estruturados via regex
+- Comparação detalhada de JSON com deepdiff
+- Relatório em JSON com extrações e diferenças
 
-🧠 Tecnologias que podemos usar
-OCR: pytesseract + Pillow para imagens
-PDF: pdf2image ou PyMuPDF
-Comparação de dados: lógica personalizada com json e difflib (ou deepdiff)
+## Requisitos
 
+- Python 3.7+
+- Tesseract OCR instalado no sistema (https://github.com/tesseract-ocr/tesseract)
+- Poppler para pdf2image instalado (ex: `poppler-utils` no Linux)
 
+## Instalação
+pip install -r requirements.txt
+
+## Uso básico
+from validadigitacao.analisador import Analisador
+
+json_digitado = {...} # seu JSON
+padroes = {...} # regex para extração
+
+analisador = Analisador(lang_ocr="por", padroes_campos=padroes)
+resultado = analisador.analisar(json_digitado, ["documento.pdf", "imagem.png"])
+
+print(resultado)
+
+## Rodando testes
+python -m unittest discover tests

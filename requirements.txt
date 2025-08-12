@@ -1,0 +1,4 @@
+pytesseract==0.3.10
+Pillow==9.5.0
+pdf2image==1.16.3
+deepdiff==6.4.1
