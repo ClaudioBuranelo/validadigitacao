@@ -1,0 +1,98 @@
+{
+    "referencia": {
+        "nome": "João da Silva",
+        "cpf": "123.456.789-00",
+        "data_nascimento": "01/01/1990",
+        "nome_mae": "Maria da Silva"
+    },
+    "resultados": [
+        {
+            "arquivo": "./exemplos/CNH_Joao_da_Silva.pdf",
+            "texto_extraido": "Carteira Nacional de Habilitação (CNH)\n\nNome: João da Silva\nCPF: 123.456.789-00\nCNPJ: 12.345.678/0001-99\n\nData de emissão: 01/01/2023",
+            "campos_extraidos": {
+                "cpfs": [
+                    "123.456.789-00"
+                ],
+                "cnpjs": [
+                    "12.345.678/0001-99"
+                ],
+                "dates": [
+                    "01/01/2023"
+                ],
+                "values": [],
+                "names": [
+                    "Carteira Nacional de Habilitação",
+                    "João da Silva"
+                ]
+            },
+            "diferencas": {
+                "values_changed": {
+                    "root": {
+                        "new_value": {
+                            "cpfs": [
+                                "123.456.789-00"
+                            ],
+                            "cnpjs": [
+                                "12.345.678/0001-99"
+                            ],
+                            "dates": [
+                                "01/01/2023"
+                            ],
+                            "values": [],
+                            "names": [
+                                "Carteira Nacional de Habilitação",
+                                "João da Silva"
+                            ]
+                        },
+                        "old_value": {
+                            "nome": "João da Silva",
+                            "cpf": "123.456.789-00",
+                            "data_nascimento": "01/01/1990",
+                            "nome_mae": "Maria da Silva"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "arquivo": "./exemplos/imagemDocumento.png",
+            "texto_extraido": "Nome: Jomoda Sitva\nCPF 123.466789-00\nData de Nascimenta 01/01/1990",
+            "campos_extraidos": {
+                "cpfs": [],
+                "cnpjs": [],
+                "dates": [
+                    "01/01/1990"
+                ],
+                "values": [],
+                "names": [
+                    "Jomoda Sitva",
+                    "Data de Nascimenta"
+                ]
+            },
+            "diferencas": {
+                "values_changed": {
+                    "root": {
+                        "new_value": {
+                            "cpfs": [],
+                            "cnpjs": [],
+                            "dates": [
+                                "01/01/1990"
+                            ],
+                            "values": [],
+                            "names": [
+                                "Jomoda Sitva",
+                                "Data de Nascimenta"
+                            ]
+                        },
+                        "old_value": {
+                            "nome": "João da Silva",
+                            "cpf": "123.456.789-00",
+                            "data_nascimento": "01/01/1990",
+                            "nome_mae": "Maria da Silva"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}
